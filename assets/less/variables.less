@@ -1,0 +1,38 @@
+// Colours
+
+// Base
+@darkgrey: #696d71;
+@lightgrey: #e8ecef;
+@blue: #45aaf4;
+
+// Font
+@font: #8c9399;
+@fontbold: @darkgrey;
+
+// Links
+@link: @blue;
+@navprimary: #ffffff;
+@navsecondary: #e8ecef;
+
+
+// Layout
+
+@navwidth: 220px;
+
+
+// Font
+
+// Weight
+@normal: 400;
+@bold: 700;
+@extrabold: 800;
+
+
+// Mixins
+
+.transition(@type:all, @time:.3s, @transition:ease) {
+	-webkit-transition: @type @time @transition;  
+	-moz-transition:    @type @time @transition;
+	-ms-transition:     @type @time @transition; 
+	-o-transition:      @type @time @transition;  
+}

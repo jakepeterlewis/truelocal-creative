@@ -1,0 +1,83 @@
+html {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	min-height: 100%;
+}
+
+header,
+.header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: @navwidth;
+	height: 100%;
+}
+
+main,
+.main {
+	padding-left: @navwidth;
+	width: 100%;
+}
+
+.page-heading {
+	background-color: @lightgrey;
+	text-align: center;
+}
+
+.page-content {
+	ul li {
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.downloads-content {
+		ul li {
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.medium-padding {
+	padding: 25px;
+}
+.large-padding {
+	padding: 50px;
+}
+.large-padding-bottom {
+	padding-bottom: 50px;
+}
+.no-padding-bottom {
+	padding-bottom: 0;
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+.align-left {
+	text-align: left;
+}
+.align-right {
+	text-align: right;
+}
+.align-center {
+	text-align: center;
+}
+
+.display-block {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+
+

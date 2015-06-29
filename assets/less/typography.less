@@ -1,0 +1,68 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	color: @font;
+	font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+	
+	.transition();
+	&.link {
+		color: @link;
+		font-size: 16px;
+		&:hover {
+			color: @fontbold;
+		}
+	}
+}
+
+.logo-wrapper {
+	.logo {
+		font-size: 18px;
+	}
+	p {
+		font-size: 16px;
+	}
+}
+
+nav {
+	font-size: 16px;
+}
+
+h1,
+h2 {
+	font-weight: @extrabold;
+	color: @fontbold;
+}
+h1 {
+	font-size: 60px;
+	margin-bottom: 20px;
+}
+h2 {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+h3 {
+	font-size: 20px;
+	color: @fontbold;
+	margin-bottom: 10px;
+}
+
+strong {
+	font-weight: normal;
+	color: @fontbold;
+}
+
+p {
+	margin: 0 0 10px 0;
+}
+
+.page-heading {
+	p {
+		font-size: 18px;
+	}
+}

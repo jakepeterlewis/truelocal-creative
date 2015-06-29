@@ -1,0 +1,9 @@
+Title: Error
+
+----
+
+Subheading: Sorry it seems like there is an error, please use the links to the left to navigate
+
+----
+
+Text: 

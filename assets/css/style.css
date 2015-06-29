@@ -1,0 +1,799 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+  display: block;
+}
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {
+  max-width: 100%;
+}
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll;
+}
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+.ie6 input {
+  vertical-align: text-bottom;
+}
+select,
+input,
+textarea {
+  font: 99% sans-serif;
+}
+table {
+  font-size: inherit;
+  font: 100%;
+}
+small {
+  font-size: 85%;
+}
+strong {
+  font-weight: bold;
+}
+td,
+td img {
+  vertical-align: top;
+}
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* standardize any monospaced elements */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, sans-serif;
+}
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:before,
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?-wshvn3');
+  src: url('../fonts/icomoon.eot?#iefix-wshvn3') format('embedded-opentype'), url('../fonts/icomoon.ttf?-wshvn3') format('truetype'), url('../fonts/icomoon.woff?-wshvn3') format('woff'), url('../fonts/icomoon.svg?-wshvn3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-download:before {
+  content: "\e960";
+}
+.icon-remove:before {
+  content: "\e07f";
+}
+.icon-arrow_back:before {
+  content: "\e200";
+}
+.icon-arrow_forward:before {
+  content: "\e204";
+}
+.icon-check:before {
+  content: "\e206";
+}
+.icon-chevron_left:before {
+  content: "\e207";
+}
+.icon-chevron_right:before {
+  content: "\e208";
+}
+.icon-close:before {
+  content: "\e209";
+}
+.icon-expand_less:before {
+  content: "\e20a";
+}
+.icon-expand_more:before {
+  content: "\e20b";
+}
+.icon-menu:before {
+  content: "\e20e";
+}
+.icon-done_all:before {
+  content: "\e28b";
+}
+.downloads-content ul li a:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e960";
+  margin-right: 5px;
+}
+html {
+  height: 100%;
+}
+body {
+  position: relative;
+  min-height: 100%;
+}
+header,
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100%;
+}
+main,
+.main {
+  padding-left: 220px;
+  width: 100%;
+}
+.page-heading {
+  background-color: #e8ecef;
+  text-align: center;
+}
+.page-content ul li {
+  margin-bottom: 15px;
+}
+.page-content ul li:last-child {
+  margin-bottom: 0;
+}
+.page-content .downloads-content ul li {
+  margin-bottom: 8px;
+}
+.medium-padding {
+  padding: 25px;
+}
+.large-padding {
+  padding: 50px;
+}
+.large-padding-bottom {
+  padding-bottom: 50px;
+}
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.display-block {
+  display: block;
+}
+.hide {
+  display: none;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  color: #8c9399;
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+a.link {
+  color: #45aaf4;
+  font-size: 16px;
+}
+a.link:hover {
+  color: #696d71;
+}
+.logo-wrapper .logo {
+  font-size: 18px;
+}
+.logo-wrapper p {
+  font-size: 16px;
+}
+nav {
+  font-size: 16px;
+}
+h1,
+h2 {
+  font-weight: 800;
+  color: #696d71;
+}
+h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 20px;
+  color: #696d71;
+  margin-bottom: 10px;
+}
+strong {
+  font-weight: normal;
+  color: #696d71;
+}
+p {
+  margin: 0 0 10px 0;
+}
+.page-heading p {
+  font-size: 18px;
+}
+header,
+.header {
+  background-color: #696d71;
+  color: #fff;
+}
+header a,
+.header a {
+  color: #fff;
+}
+header .logo-wrapper,
+.header .logo-wrapper {
+  background-color: #45aaf4;
+  text-align: center;
+  display: block;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+header .logo-wrapper .logo,
+.header .logo-wrapper .logo {
+  font-weight: 800;
+  margin-bottom: 15px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+header .logo-wrapper p,
+.header .logo-wrapper p {
+  margin: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+header .logo-wrapper:hover,
+.header .logo-wrapper:hover {
+  background-color: #fff;
+}
+header .logo-wrapper:hover .logo,
+.header .logo-wrapper:hover .logo {
+  color: #45aaf4;
+}
+header .logo-wrapper:hover p,
+.header .logo-wrapper:hover p {
+  color: #45aaf4;
+}
+nav ul li {
+  margin-bottom: 20px;
+}
+nav ul li:last-child {
+  margin-bottom: 0;
+}
+nav .submenu {
+  display: none;
+}
+nav .active-menu > .submenu {
+  display: block;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+nav a {
+  position: relative;
+}
+nav a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+nav a:hover:before {
+  width: 100%;
+  background-color: #45aaf4;
+}
+nav a.active {
+  font-weight: bold;
+}
+nav a.active:before {
+  width: 100%;
+  background-color: #45aaf4;
+}
+.section-categories ul li {
+  margin: 0 0 0 0;
+}
+.section-categories ul li a {
+  padding: 20px 0;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: #45aaf4;
+}
+.section-categories ul li a:hover {
+  color: #696d71;
+}
+.section-categories ul li > ul li a {
+  padding-left: 20px;
+}
+.page-content .input-select-wrapper {
+  max-width: 1000px;
+  border: 1px solid #ddd;
+  margin: 50px auto 0 auto;
+}
+.page-content .input-select-wrapper input[type="checkbox"] {
+  display: none;
+}
+.page-content .input-select-wrapper li {
+  margin-bottom: 0;
+}
+.page-content .input-select-wrapper li label {
+  border-bottom: 1px solid #ddd;
+}
+.page-content .input-select-wrapper li:last-child label {
+  border-bottom: 0;
+}
+.page-content .input-select-wrapper label {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 15px 0 15px 15px;
+  background-color: #fff;
+  color: #333;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.page-content .input-select-wrapper label a {
+  color: #333;
+}
+.page-content .input-select-wrapper label div {
+  height: 100%;
+}
+.page-content .input-select-wrapper .img-wrapper {
+  margin-right: 15px;
+}
+.page-content .input-select-wrapper .img-wrapper img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+}
+.page-content .input-select-wrapper .icon-check {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #ddd;
+  margin-right: 15px;
+  margin-top: 25px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.page-content .input-select-wrapper .icon-check:before {
+  color: #ddd;
+  top: 9px;
+  left: 9px;
+  font-size: 20px;
+  position: relative;
+}
+.page-content .input-select-wrapper .content {
+  padding-top: 35px;
+}
+.page-content .input-select-wrapper .type {
+  border-left: 1px solid #ddd;
+  padding-top: 35px;
+  width: 228px;
+  z-index: 1;
+  position: relative;
+  -webkit-transform: translateX(122px);
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+}
+.page-content .input-select-wrapper .free-listing,
+.page-content .input-select-wrapper .basic-listing {
+  display: block;
+  position: absolute;
+}
+.page-content .input-select-wrapper .free-listing {
+  left: 15px;
+}
+.page-content .input-select-wrapper .basic-listing {
+  right: 15px;
+  height: 20px;
+  overflow: hidden;
+}
+.page-content .input-select-wrapper .basic-listing .icon-arrow_forward {
+  padding-left: 15px;
+  margin-right: 10px;
+  position: relative;
+  top: 1px;
+}
+.page-content .input-select-wrapper .price {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 25px;
+  border-left: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+  z-index: 5;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  font-size: 10px;
+}
+.page-content .input-select-wrapper .price .font-big {
+  font-size: 18px;
+}
+.page-content .input-select-wrapper input[type="checkbox"]:checked + label {
+  background-color: #333;
+  border-bottom-color: #333;
+  color: #fff;
+}
+.page-content .input-select-wrapper input[type="checkbox"]:checked + label a {
+  color: #fff;
+}
+.page-content .input-select-wrapper input[type="checkbox"]:checked + label .icon-check {
+  border: 1px solid #333;
+}
+.page-content .input-select-wrapper input[type="checkbox"]:checked + label .price {
+  background-color: #333;
+  color: #fff;
+}
+.page-content .input-select-wrapper input[type="checkbox"]:checked + label .type {
+  -webkit-transform: translateX(0);
+}
+.fixed-100 {
+  width: 100px;
+}
+.page-content .total-price {
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  color: #333;
+}
+.page-content .total-price li {
+  height: 120px;
+  padding: 15px 0 15px 15px;
+  margin-bottom: 0;
+  background-color: #f5f5f5;
+}
+.page-content .total-price li .text {
+  font-weight: 700;
+  padding-top: 35px;
+}
+.page-content .total-price li .figure {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 25px;
+  border-left: 1px solid #ddd;
+  margin-left: 15px;
+  font-size: 10px;
+  position: relative;
+}
+.page-content .total-price li .figure .font-big {
+  font-size: 18px;
+}
+.page-content .total-price li .figure .icon {
+  position: absolute;
+  bottom: -33px;
+  left: 50%;
+  margin-left: -18px;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  color: #333;
+  font-size: 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+.page-content .total-price li .figure .icon:before {
+  position: relative;
+  top: 9px;
+  left: 9px;
+}
+.page-content .total-price li div {
+  height: 100%;
+}
+.page-content .total-price .contract {
+  background-color: #fff;
+}
+.page-content .total-price .contract .text {
+  font-weight: 400;
+}
+.page-content .total-price .contract .figure {
+  font-size: 14px;
+}
+.page-content .total-price .contract .figure .text {
+  font-weight: 700;
+  padding-top: 10px;
+}
+.page-content .total-price .contract .figure .icon-equals {
+  font-size: 22px;
+}
+.page-content .total-price .contract .figure .icon-equals:before {
+  content: "=";
+  top: 4px;
+}
+.page-content .total-price .total-upfront {
+  background-color: #efefef;
+}
+.page-content .total-price .total-upfront .figure {
+  padding-top: 32px;
+}
